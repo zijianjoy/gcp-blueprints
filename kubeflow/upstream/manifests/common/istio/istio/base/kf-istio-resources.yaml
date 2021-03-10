@@ -60,7 +60,7 @@ spec:
   tls:
   - match:
     - port: 443
-      sni_hosts:
+      sniHosts:
       - www.googleapis.com
     route:
     - destination:
@@ -93,7 +93,7 @@ spec:
   tls:
   - match:
     - port: 443
-      sni_hosts:
+      sniHosts:
       - storage.googleapis.com
     route:
     - destination:
@@ -101,13 +101,28 @@ spec:
         port:
           number: 443
       weight: 100
+# ---
+# apiVersion: rbac.istio.io/v1alpha1
+# kind: ClusterRbacConfig
+# metadata:
+#   name: default
+# spec:
+#   mode: $(clusterRbacConfig)
+#   exclusion:
+#     namespaces:
+#     - istio-system # Accessing Istio services won't require an rbac policy.
 ---
-apiVersion: rbac.istio.io/v1alpha1
-kind: ClusterRbacConfig
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
 metadata:
-  name: default
+  name: deny-all
 spec:
-  mode: $(clusterRbacConfig)
-  exclusion:
-    namespaces:
-    - istio-system # Accessing Istio services won't require an rbac policy.
+{}
+---
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: deny-exclusion
+  namespace: istio-system
+spec:
+  action: ALLOW
