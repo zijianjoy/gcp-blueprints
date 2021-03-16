@@ -28,4 +28,4 @@ spec:
     app.kubernetes.io/name: centraldashboard
     kustomize.component: centraldashboard
   sessionAffinity: None
-  type: NodePort
+  type: ClusterIP
