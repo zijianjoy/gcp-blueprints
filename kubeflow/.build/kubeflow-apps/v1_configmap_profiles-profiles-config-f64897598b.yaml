@@ -1,10 +1,10 @@
 apiVersion: v1
 data:
   admin: jamxl@google.com
-  gcp-sa: kf-iap-user@jamxl-kfp-dev.iam.gserviceaccount.com
+  gcp-sa: kf-asm-user@jamxl-kfp-dev.iam.gserviceaccount.com
 kind: ConfigMap
 metadata:
   labels:
     kustomize.component: profiles
-  name: profiles-profiles-config-77tm5ccd27
+  name: profiles-profiles-config-f64897598b
   namespace: kubeflow
