@@ -12,8 +12,6 @@ spec:
     - source:
         namespaces:
         - istio-system
-    # to:
-    # - operation: {}
   selector:
     matchLabels:
       app: ml-pipeline-ui

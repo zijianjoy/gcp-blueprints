@@ -4,7 +4,7 @@ metadata:
   labels:
     app.kubernetes.io/component: ml-pipeline
     app.kubernetes.io/name: kubeflow-pipelines
-  name: ml-pipeline-internal
+  name: ml-pipeline-internal-visualizationserver
   namespace: kubeflow
 spec:
   rules:
@@ -19,4 +19,4 @@ spec:
         - cluster.local/ns/kubeflow/sa/kubeflow-pipelines-cache
   selector:
     matchLabels:
-      app: ml-pipeline
+      app: ml-pipeline-visualizationserver
