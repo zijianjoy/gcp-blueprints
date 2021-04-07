@@ -1,0 +1,16 @@
+apiVersion: v1
+data:
+  appName: dev-4-7
+  hostname: dev-4-7.endpoints.gongyuan-dev.cloud.goog
+  ingressName: envoy-ingress
+  ipName: dev-4-7-ip
+  istioNamespace: istio-system
+  oauthSecretName: kubeflow-oauth
+  project: gongyuan-dev
+  tlsSecretName: envoy-ingress-tls
+kind: ConfigMap
+metadata:
+  labels:
+    kustomize.component: iap-ingress
+  name: iap-ingress-config-78t2dbdmc9
+  namespace: istio-system
