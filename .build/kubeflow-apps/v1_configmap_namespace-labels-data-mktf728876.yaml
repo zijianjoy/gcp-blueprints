@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  namespace-labels.yaml: "# Below is a list of labels to be enforced.\nistio-injection: ''\nistio.io/rev: 'asm-192-1' "
+kind: ConfigMap
+metadata:
+  labels:
+    kustomize.component: profiles
+  name: namespace-labels-data-mktf728876
+  namespace: kubeflow
