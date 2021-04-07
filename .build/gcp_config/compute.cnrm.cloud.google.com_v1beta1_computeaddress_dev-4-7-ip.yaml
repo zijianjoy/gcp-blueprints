@@ -1,0 +1,13 @@
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeAddress
+metadata:
+  labels:
+    kf-name: dev-4-7
+    label-one: value-one
+  name: dev-4-7-ip
+  namespace: gongyuan-dev
+spec:
+  addressType: EXTERNAL
+  description: Static IP for Kubeflow ingress.
+  ipVersion: IPV4
+  location: global

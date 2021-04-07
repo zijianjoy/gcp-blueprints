@@ -1,0 +1,49 @@
+apiVersion: container.cnrm.cloud.google.com/v1beta1
+kind: ContainerCluster
+metadata:
+  clusterName: gongyuan-dev/asia-east1-c/dev-4-7
+  labels:
+    kf-name: dev-4-7
+    mesh_id: proj-117584514845
+  name: dev-4-7
+  namespace: gongyuan-dev
+spec:
+  addonsConfig:
+    httpLoadBalancing:
+      disabled: false
+  clusterAutoscaling:
+    autoProvisioningDefaults:
+      oauthScopes:
+      - https://www.googleapis.com/auth/logging.write
+      - https://www.googleapis.com/auth/monitoring
+      - https://www.googleapis.com/auth/devstorage.read_only
+      serviceAccountRef:
+        name: dev-4-7-vm
+    enabled: true
+    resourceLimits:
+    - maximum: 128
+      resourceType: cpu
+    - maximum: 2000
+      resourceType: memory
+    - maximum: 16
+      resourceType: nvidia-tesla-k80
+  initialNodeCount: 2
+  location: asia-east1-c
+  loggingService: logging.googleapis.com/kubernetes
+  monitoringService: monitoring.googleapis.com/kubernetes
+  nodeConfig:
+    machineType: n1-standard-8
+    metadata:
+      disable-legacy-endpoints: "true"
+    oauthScopes:
+    - https://www.googleapis.com/auth/logging.write
+    - https://www.googleapis.com/auth/monitoring
+    - https://www.googleapis.com/auth/devstorage.read_only
+    serviceAccountRef:
+      name: dev-4-7-vm
+    workloadMetadataConfig:
+      nodeMetadata: GKE_METADATA_SERVER
+  releaseChannel:
+    channel: REGULAR
+  workloadIdentityConfig:
+    identityNamespace: gongyuan-dev.svc.id.goog

@@ -1,0 +1,14 @@
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  labels:
+    kf-name: dev-4-7
+  name: dev-4-7-admin-workload-identity-user
+  namespace: gongyuan-dev
+spec:
+  member: serviceAccount:gongyuan-dev.svc.id.goog[kubeflow/profiles-controller-service-account]
+  resourceRef:
+    apiVersion: iam.cnrm.cloud.google.com/v1beta1
+    kind: IAMServiceAccount
+    name: dev-4-7-admin
+  role: roles/iam.workloadIdentityUser

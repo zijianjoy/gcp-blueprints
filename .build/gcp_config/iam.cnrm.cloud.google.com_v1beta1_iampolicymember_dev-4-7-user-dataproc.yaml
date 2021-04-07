@@ -1,0 +1,14 @@
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  labels:
+    kf-name: dev-4-7
+  name: dev-4-7-user-dataproc
+  namespace: gongyuan-dev
+spec:
+  member: serviceAccount:dev-4-7-user@gongyuan-dev.iam.gserviceaccount.com
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    external: projects/gongyuan-dev
+    kind: Project
+  role: roles/dataproc.editor
