@@ -4,5 +4,4 @@ data:
   gcp-sa: dev-4-7-user@gongyuan-dev.iam.gserviceaccount.com # {"$kpt-set":"gcp-sa"}
 kind: ConfigMap
 metadata:
-  creationTimestamp: null
-  name: profiles-config
+  name: config

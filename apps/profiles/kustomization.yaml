@@ -9,6 +9,7 @@ commonLabels:
 
 patchesStrategicMerge:
 - patches/manager.yaml
+- patches/profiles-config.yaml
 
 configMapGenerator:
 - name: namespace-labels-data

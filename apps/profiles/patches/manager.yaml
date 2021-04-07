@@ -16,4 +16,37 @@ spec:
         volumeMounts:
         - name: namespace-labels
           mountPath: /etc/config/labels
-          readOnly: true 
+          readOnly: true
+        env:
+        - name: USERID_HEADER
+          valueFrom:
+            configMapKeyRef:
+              name: kubeflow-config
+              key: userid-header
+        - name: USERID_PREFIX
+          valueFrom:
+            configMapKeyRef:
+              name: kubeflow-config
+              key: userid-prefix
+        - name: WORKLOAD_IDENTITY
+          valueFrom:
+            configMapKeyRef:
+              name: profiles-config
+              key: gcp-sa
+      - name: kfam
+        env:
+        - name: USERID_HEADER
+          valueFrom:
+            configMapKeyRef:
+              name: kubeflow-config
+              key: userid-header
+        - name: USERID_PREFIX
+          valueFrom:
+            configMapKeyRef:
+              name: kubeflow-config
+              key: userid-prefix
+        - name: WORKLOAD_IDENTITY
+          valueFrom:
+            configMapKeyRef:
+              name: profiles-config
+              key: gcp-sa

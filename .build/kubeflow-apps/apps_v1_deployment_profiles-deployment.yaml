@@ -26,9 +26,25 @@ spec:
         - $(USERID_PREFIX)
         - -workload-identity
         - $(WORKLOAD_IDENTITY)
+        env:
+        - name: USERID_HEADER
+          valueFrom:
+            configMapKeyRef:
+              key: userid-header
+              name: kubeflow-config-h98fkdgb95
+        - name: USERID_PREFIX
+          valueFrom:
+            configMapKeyRef:
+              key: userid-prefix
+              name: kubeflow-config-h98fkdgb95
+        - name: WORKLOAD_IDENTITY
+          valueFrom:
+            configMapKeyRef:
+              key: gcp-sa
+              name: profiles-config-bm6d2htdc4
         envFrom:
         - configMapRef:
-            name: profiles-config-46c7tgh6fd
+            name: profiles-config-bm6d2htdc4
         image: gcr.io/jamxl-kfp-dev/profile-controller:kf-v1.3-rc0
         imagePullPolicy: Always
         livenessProbe:
@@ -54,9 +70,25 @@ spec:
         - $(USERID_HEADER)
         - -userid-prefix
         - $(USERID_PREFIX)
+        env:
+        - name: USERID_HEADER
+          valueFrom:
+            configMapKeyRef:
+              key: userid-header
+              name: kubeflow-config-h98fkdgb95
+        - name: USERID_PREFIX
+          valueFrom:
+            configMapKeyRef:
+              key: userid-prefix
+              name: kubeflow-config-h98fkdgb95
+        - name: WORKLOAD_IDENTITY
+          valueFrom:
+            configMapKeyRef:
+              key: gcp-sa
+              name: profiles-config-bm6d2htdc4
         envFrom:
         - configMapRef:
-            name: profiles-config-46c7tgh6fd
+            name: profiles-config-bm6d2htdc4
         image: public.ecr.aws/j1r0q0g6/notebooks/access-management:v1.3.0-rc.0
         imagePullPolicy: Always
         livenessProbe:
