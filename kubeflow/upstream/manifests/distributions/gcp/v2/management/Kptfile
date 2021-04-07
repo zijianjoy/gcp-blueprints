@@ -10,19 +10,19 @@ openAPI:
       x-k8s-cli:
         setter:
           name: location
-          value: us-east1
+          value: asia-east1-c
           isSet: true
     io.k8s.cli.setters.name:
       x-k8s-cli:
         setter:
           name: name
-          value: NAME
+          value: dev-4-7
           isSet: true
     io.k8s.cli.setters.gcloud.core.project:
       x-k8s-cli:
         setter:
           name: gcloud.core.project
-          value: PROJECT
+          value: gongyuan-dev
           isSet: true
     io.k8s.cli.substitutions.cluster-name:
       x-k8s-cli:

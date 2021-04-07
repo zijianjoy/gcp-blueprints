@@ -15,7 +15,7 @@
 apiVersion: install.istio.io/v1alpha2
 kind: IstioControlPlane
 metadata:
-  clusterName: "project-id/location/name" # {"$kpt-set":"asm-cluster-name"}
+  clusterName: "gongyuan-dev/asia-east1-c/dev-4-7" # {"$kpt-set":"asm-cluster-name"}
 spec:
   profile: asm
   hub: gcr.io/gke-release/asm
@@ -25,14 +25,14 @@ spec:
       istio-ingressgateway:
         type: NodePort
     global:
-      meshID: "proj-projectNumber" # {"$kpt-set":"asm-mesh-id"}
-      trustDomain: "project-id.svc.id.goog" # {"$kpt-set":"identity-ns"}
+      meshID: "proj-117584514845" # {"$kpt-set":"asm-mesh-id"}
+      trustDomain: "gongyuan-dev.svc.id.goog" # {"$kpt-set":"identity-ns"}
       sds:
         token:
-          aud: "project-id.svc.id.goog" # {"$kpt-set":"identity-ns"}
+          aud: "gongyuan-dev.svc.id.goog" # {"$kpt-set":"identity-ns"}
       proxy:
         env:
-          GCP_METADATA: "project-id|projectNumber|name|location" # {"$kpt-set":"asm-gcp-metadata"}
+          GCP_METADATA: "gongyuan-dev|117584514845|dev-4-7|asia-east1-c" # {"$kpt-set":"asm-gcp-metadata"}
     nodeagent:
       env:
-        GKE_CLUSTER_URL: "https://container.googleapis.com/v1/projects/project-id/locations/location/clusters/name" # {"$kpt-set":"asm-cluster-url"}
+        GKE_CLUSTER_URL: "https://container.googleapis.com/v1/projects/gongyuan-dev/locations/asia-east1-c/clusters/dev-4-7" # {"$kpt-set":"asm-cluster-url"}

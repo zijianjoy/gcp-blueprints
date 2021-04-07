@@ -10,13 +10,13 @@ openAPI:
       x-k8s-cli:
         setter:
           name: name
-          value: KUBEFLOW-NAME
+          value: dev-4-7
           isSet: true
     io.k8s.cli.setters.gcloud.core.project:
       x-k8s-cli:
         setter:
           name: gcloud.core.project
-          value: PROJECT
+          value: gongyuan-dev
           isSet: true
     io.k8s.cli.substitutions.admin-sa-ref:
       x-k8s-cli:

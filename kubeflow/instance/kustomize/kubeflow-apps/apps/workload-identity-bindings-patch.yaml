@@ -3,7 +3,7 @@ kind: ServiceAccount
 metadata:
   name: profiles-controller-service-account
   annotations:
-    iam.gke.io/gcp-service-account: name-admin@project-id.iam.gserviceaccount.com # {"$kpt-set":"admin-sa-ref"}
+    iam.gke.io/gcp-service-account: dev-4-7-admin@gongyuan-dev.iam.gserviceaccount.com # {"$kpt-set":"admin-sa-ref"}
 # ---
 # apiVersion: v1
 # kind: ServiceAccount

@@ -10,19 +10,19 @@ openAPI:
       x-k8s-cli:
         setter:
           name: gcloud.core.project
-          value: PROJECT
+          value: gongyuan-dev
           isSet: true
     io.k8s.cli.setters.name:
       x-k8s-cli:
         setter:
           name: name
-          value: KUBEFLOW-NAME
+          value: dev-4-7
           isSet: true
     io.k8s.cli.setters.gcloud.compute.zone:
       x-k8s-cli:
         setter:
           name: gcloud.compute.zone
-          value: ZONE
+          value: asia-east1-c
           isSet: true
     io.k8s.cli.setters.gcloud.compute.region:
       x-k8s-cli:
@@ -33,7 +33,7 @@ openAPI:
       x-k8s-cli:
         setter:
           name: location
-          value: LOCATION
+          value: asia-east1-c
           isSet: true
     io.k8s.cli.setters.log-firewalls:
       x-k8s-cli:
@@ -701,7 +701,7 @@ openAPI:
       x-k8s-cli:
         setter:
           name: gcloud.project.projectNumber
-          value: "PROJECT_NUMBER"
+          value: "117584514845"
           isSet: true
     io.k8s.cli.substitutions.asm-gcp-metadata:
       x-k8s-cli:

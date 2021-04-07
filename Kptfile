@@ -18,7 +18,7 @@ openAPI:
       x-k8s-cli:
         setter:
           name: gcloud.core.project
-          value: jamxl-kfp-dev
+          value: gongyuan-dev
           isSet: true
     io.k8s.cli.substitutions.name-label:
       x-k8s-cli:
@@ -32,19 +32,19 @@ openAPI:
       x-k8s-cli:
         setter:
           name: name
-          value: kf-ref
+          value: dev-4-7
           isSet: true
     io.k8s.cli.setters.location:
       x-k8s-cli:
         setter:
           name: location
-          value: "us-west1-b"
+          value: "asia-east1-c"
           isSet: true
     io.k8s.cli.setters.mgmt-ctxt:
       x-k8s-cli:
         setter:
           name: mgmt-ctxt
-          value: full-kf-management
+          value: mgmt-3-23
           isSet: true
     io.k8s.cli.setters.kustomize_manifests_path:
       x-k8s-cli:
@@ -173,7 +173,7 @@ openAPI:
       x-k8s-cli:
         setter:
           name: email
-          value: jamxl@google.com
+          value: gongyuan@google.com
           isSet: true
     io.k8s.cli.substitutions.gcp-sa:
       x-k8s-cli:
