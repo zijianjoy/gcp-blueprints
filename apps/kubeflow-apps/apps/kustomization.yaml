@@ -30,34 +30,34 @@ resources:
 # - ../../../../upstream/manifests/apps/pytorch-job/upstream/pytorch-operator/overlays/application
 # - ../../../../upstream/manifests/apps/tf-training/upstream/tf-job-crds/overlays/application
 # - ../../../../upstream/manifests/apps/tf-training/upstream/tf-job-operator/overlays/application
-- ../../pytorch-job/upstream/overlays/kubeflow
-- ../../tf-training/upstream/overlays/kubeflow
+# - ../../pytorch-job/upstream/overlays/kubeflow
+# - ../../tf-training/upstream/overlays/kubeflow
 
 # # pipeline's dependency
-- ../../../contrib/argo/upstream/base_v3
+# - ../../../contrib/argo/upstream/base_v3
 # - ../../../../upstream/manifests/contrib/metadata/v3
-- ../../pipeline/upstream/base/metadata/base
+# - ../../pipeline/upstream/base/metadata/base
 
 # # pipeline itself. Minio: object store. mysql: DB.
 # - ../../pipeline/upstream/minio/installs/gcp-pd
 # - ../../pipeline/upstream/mysql/installs/gcp-pd
 # - ../../pipeline/upstream/installs/multi-user
-- ../../pipeline/upstream/third-party/minio/base
-- ../../pipeline/upstream/third-party/mysql/base
-- ../../pipeline/upstream/base/installs/multi-user
+# - ../../pipeline/upstream/third-party/minio/base
+# - ../../pipeline/upstream/third-party/mysql/base
+# - ../../pipeline/upstream/base/installs/multi-user
 
 # # Depends on Knative, installed in another package.
 # - ../../../../upstream/manifests/apps/kfserving/upstream/installs/generic
-- ../../kfserving/upstream/overlays/kubeflow
+# - ../../kfserving/upstream/overlays/kubeflow
 
 # # default namespace
 # # This package will create a profile resource so it needs to be installed after the profiles CR
 # - ../../../../upstream/manifests/contrib/default-install/base
-- ../../../common/user-namespace/upstream/base
+# - ../../../common/user-namespace/upstream/base
 
 # # AutoML working group: no dependency
 # - ../../../../upstream/manifests/apps/katib/upstream/installs/katib-standalone
-- ../../katib/upstream/installs/katib-with-kubeflow-cert-manager
+# - ../../katib/upstream/installs/katib-with-kubeflow-cert-manager
 
 # It will fail to build if uncomment, needs to determine whether it is needed.
 # patchesStrategicMerge:
