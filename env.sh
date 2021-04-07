@@ -1,6 +1,6 @@
-KF_NAME=<kubeflow-cluster-name>
-KF_PROJECT=<gcp-project-id>
-KF_DIR=<kubeflow-download-path>
-MGMT_NAME=<management-cluster-name>
-MGMTCTXT=${MGMT_NAME}
-LOCATION=<zone>
+KF_NAME=dev-4-7
+KF_PROJECT=gongyuan-dev
+KF_DIR="$PWD"
+MGMT_NAME=mgmt-3-23
+MGMTCTXT="${MGMT_NAME}"
+LOCATION=asia-east1-c
