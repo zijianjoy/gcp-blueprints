@@ -5,16 +5,16 @@
 set-cfg-values:
 	kpt cfg set -R .  gke.private false
 
-	kpt cfg set -R .  mgmt-ctxt <YOUR_MANAGEMENT_CTXT>
+	kpt cfg set -R .  mgmt-ctxt mgmt-3-23
 
-	kpt cfg set -R .  name <YOUR_KF_NAME>
-	kpt cfg set -R .  gcloud.project.projectNumber <PROJECT_NUMBER_TO_DEPLOY_IN>
-	kpt cfg set -R .  gcloud.core.project <PROJECT_ID_TO_DEPLOY_IN>
-	kpt cfg set -R .  gcloud.compute.zone <ZONE>
-	kpt cfg set -R .  location <REGION OR ZONE>
+	kpt cfg set -R .  name dev-4-7
+	kpt cfg set -R .  gcloud.project.projectNumber 117584514845
+	kpt cfg set -R .  gcloud.core.project gongyuan-dev
+	kpt cfg set -R .  gcloud.compute.zone asia-east1-c
+	kpt cfg set -R .  location asia-east1-c
 	kpt cfg set -R .  log-firewalls false
 
-	kpt cfg set -R .  email <YOUR_EMAIL_ADDRESS>
+	kpt cfg set -R .  email gongyuan@google.com
 
 # Reset various kpt values to default values and remove other
 # files that shouldn't be included in PRs
@@ -30,7 +30,7 @@ clean-for-pr: reset-cfg-values
 .PHONY: reset-cfg-values
 reset-cfg-values:
 	kpt cfg set -R . gke.private false
-	
+
 	kpt cfg set -R . mgmt-ctxt MANAGEMENT-CTXT
 
 	kpt cfg set -R .  name KUBEFLOW-NAME
