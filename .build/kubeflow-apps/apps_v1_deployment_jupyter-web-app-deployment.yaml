@@ -22,14 +22,20 @@ spec:
     spec:
       containers:
       - env:
+        - name: USERID_HEADER
+          valueFrom:
+            configMapKeyRef:
+              key: userid-header
+              name: kubeflow-config-h98fkdgb95
+        - name: USERID_PREFIX
+          valueFrom:
+            configMapKeyRef:
+              key: userid-prefix
+              name: kubeflow-config-h98fkdgb95
         - name: APP_PREFIX
           value: /jupyter
         - name: UI
           value: default
-        - name: USERID_HEADER
-          value: kubeflow-userid
-        - name: USERID_PREFIX
-          value: ""
         image: public.ecr.aws/j1r0q0g6/notebooks/jupyter-web-app:v1.3.0-rc.0
         name: jupyter-web-app
         ports:
