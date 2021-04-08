@@ -11,7 +11,7 @@ spec:
     defaultConfig:
       proxyMetadata:
         GKE_CLUSTER_URL: "https://container.googleapis.com/v1/projects/gongyuan-dev/locations/us-central1-c/clusters/asm-cluster" # {"$ref":"#/definitions/io.k8s.cli.substitutions.gke-cluster-url"}
-        GCP_METADATA: "gongyuan-dev|PROJECT_NUMBER|asm-cluster|us-central1-c" # {"$ref":"#/definitions/io.k8s.cli.substitutions.gke-metadata"}
+        GCP_METADATA: "gongyuan-dev|117584514845|asm-cluster|us-central1-c" # {"$ref":"#/definitions/io.k8s.cli.substitutions.gke-metadata"}
         CA_PROVIDER: "GoogleCA"
         PLUGINS: "GoogleTokenExchange"
         USE_TOKEN_FOR_CSR: "true"
@@ -53,7 +53,7 @@ spec:
         - name: GKE_CLUSTER_URL
           value: "https://container.googleapis.com/v1/projects/gongyuan-dev/locations/us-central1-c/clusters/asm-cluster" # {"$ref":"#/definitions/io.k8s.cli.substitutions.gke-cluster-url"}
         - name: GCP_METADATA
-          value: "gongyuan-dev|PROJECT_NUMBER|asm-cluster|us-central1-c" # {"$ref":"#/definitions/io.k8s.cli.substitutions.gke-metadata"}
+          value: "gongyuan-dev|117584514845|asm-cluster|us-central1-c" # {"$ref":"#/definitions/io.k8s.cli.substitutions.gke-metadata"}
         - name: SPIFFE_BUNDLE_ENDPOINTS
           value: "gongyuan-dev.svc.id.goog|https://storage.googleapis.com/mesh-ca-resources/spiffe_bundle.json" # {"$ref":"#/definitions/io.k8s.cli.substitutions.spiffe-bundle-endpoints"}
         - name: ENABLE_STACKDRIVER_MONITORING

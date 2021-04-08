@@ -14,7 +14,7 @@ set-cfg-values:
 	kpt cfg set -R .  location asia-east1-c
 	kpt cfg set -R .  log-firewalls false
 
-	kpt cfg set -R .  email gongyuan@google.com
+	kpt cfg set -R .  email gongyuan@kubeflow.org
 
 # Reset various kpt values to default values and remove other
 # files that shouldn't be included in PRs

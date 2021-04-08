@@ -173,7 +173,7 @@ openAPI:
       x-k8s-cli:
         setter:
           name: email
-          value: gongyuan@google.com
+          value: gongyuan@kubeflow.org
           isSet: true
     io.k8s.cli.substitutions.gcp-sa:
       x-k8s-cli:

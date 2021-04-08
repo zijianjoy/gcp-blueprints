@@ -4,11 +4,11 @@ data:
   USERID_HEADER: kubeflow-userid
   USERID_PREFIX: ""
   WORKLOAD_IDENTITY: ""
-  admin: gongyuan@google.com
+  admin: gongyuan@kubeflow.org
   gcp-sa: dev-4-7-user@gongyuan-dev.iam.gserviceaccount.com
 kind: ConfigMap
 metadata:
   labels:
     kustomize.component: profiles
-  name: profiles-config-bm6d2htdc4
+  name: profiles-config-475bgh929b
   namespace: kubeflow
