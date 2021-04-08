@@ -29,9 +29,15 @@ spec:
       containers:
       - env:
         - name: USERID_HEADER
-          value: kubeflow-userid
+          valueFrom:
+            configMapKeyRef:
+              key: userid-header
+              name: kubeflow-config-h98fkdgb95
         - name: USERID_PREFIX
-          value: ""
+          valueFrom:
+            configMapKeyRef:
+              key: userid-prefix
+              name: kubeflow-config-h98fkdgb95
         - name: PROFILES_KFAM_SERVICE_HOST
           value: profiles-kfam.kubeflow
         - name: REGISTRATION_FLOW
