@@ -64,6 +64,7 @@ spec:
                       type: string
                     spec:
                       type: object
+                      x-kubernetes-preserve-unknown-fields: true
                   type: object
                 type: array
               resourceQuotaSpec:
@@ -178,6 +179,7 @@ spec:
                       type: string
                     spec:
                       type: object
+                      x-kubernetes-preserve-unknown-fields: true
                   type: object
                 type: array
               resourceQuotaSpec:
