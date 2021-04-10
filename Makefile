@@ -263,6 +263,18 @@ apply-knative: hydrate-knative
 	kubectl --context=$(KFCTXT) apply -f ./$(BUILD_DIR)/knative
 
 # ***********************************************************************************
+# cluster-local-gateway
+.PHONY: hydrate-cluster-local-gateway
+hydrate-cluster-local-gateway:
+	mkdir -p $(BUILD_DIR)/cluster-local-gateway
+	# kustomize build --load_restrictor none -o $(BUILD_DIR)/cluster-local-gateway .common/istio/cluster-local-gateway/base_v3
+	kustomize build --load-restrictor LoadRestrictionsNone -o $(BUILD_DIR)/cluster-local-gateway ./common/istio/istio-1-9-0/cluster-local-gateway/base
+
+.PHONY: apply-cluster-local-gateway
+apply-cluster-local-gateway: hydrate-cluster-local-gateway
+	kubectl --context=$(KFCTXT) apply -f ./$(BUILD_DIR)/cluster-local-gateway
+
+# ***********************************************************************************
 # kubeflow-apps
 .PHONY: hydrate-kubeflow-apps
 hydrate-kubeflow-apps:

@@ -33,7 +33,8 @@ resources:
 
 # # Depends on Knative, installed in another package.
 # - ../../../../upstream/manifests/apps/kfserving/upstream/installs/generic
-- ../../kfserving/upstream/overlays/kubeflow
+# - ../../kfserving/upstream/overlays/kubeflow
+- ../../kfserving/installs/generic
 
 # # default namespace
 # # This package will create a profile resource so it needs to be installed after the profiles CR

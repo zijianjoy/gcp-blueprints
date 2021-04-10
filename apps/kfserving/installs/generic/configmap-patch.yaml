@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: inferenceservice-config
+  namespace: kubeflow
+data:
+  ingress: |-
+    {
+        "ingressGateway" : "kubeflow-gateway.kubeflow",
+        "ingressService" : "istio-ingressgateway.istio-system.svc.cluster.local",
+        "localGateway" : "cluster-local-gateway.knative-serving",
+        "localGatewayService" : "cluster-local-gateway.istio-system.svc.cluster.local"
+    }
