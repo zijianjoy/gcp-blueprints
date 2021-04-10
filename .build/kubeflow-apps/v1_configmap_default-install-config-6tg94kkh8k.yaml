@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  profile-name: kubeflow-user
+  user: user
+kind: ConfigMap
+metadata:
+  name: default-install-config-6tg94kkh8k
+  namespace: kubeflow
