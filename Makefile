@@ -123,6 +123,15 @@ install-asm: install-asm-script
 	--enable_all \
 	--custom_overlay $(APP_DIR)/common/asm/asm/istio/options/iap-operator.yaml
 
+.PHONY: install-asm-cluster-local-gateway
+install-asm-cluster-local-gateway: 
+	$(APP_DIR)/common/asm/install_asm \
+	--project_id $(PROJECT) \
+	--cluster_name $(NAME) \
+	--cluster_location $(LOCATION) \
+	--mode install \
+	--enable_all \
+	--custom_overlay $(APP_DIR)/exp/asm/cluster-local-gateway.yaml
 
 #**************************************************************************************************************************
 # Hydration
