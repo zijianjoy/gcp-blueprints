@@ -1,0 +1,26 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: kfserving-iap-jamxl
+spec:
+  gateways:
+  - kubeflow/kubeflow-gateway
+  hosts:
+  - '*'
+  http:
+  - match:
+    - uri:
+        prefix: /kfserving/jamxl/sklearn-iap
+    route:
+    - destination:
+        # host: cluster-local-gateway.knative-serving.svc.cluster.local
+        # host: cluster-local-gateway.istio-system.svc.cluster.local
+        host: knative-local-gateway.istio-system.svc.cluster.local
+      headers:
+        request:
+          set:
+            Host: sklearn-iap-predictor-default.jamxl.svc.cluster.local
+      weight: 100
+    rewrite:
+        uri: /v1/models/sklearn-iap
+    timeout: 300s
